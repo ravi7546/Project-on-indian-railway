@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNR Status Checker</title>
+    
+    <link rel="stylesheet" href="css/PNR.CSS">
+
+</head>
+<body>
+    <div class="container">
+        <h1>PNR Status Checker</h1>
+        <form id="pnrForm">
+            <label for="pnr">Enter PNR Number:</label>
+            <input type="text" id="pnr" name="pnr" placeholder="Enter your PNR number...">
+            <input type="submit" value="Check Status">
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById("pnrForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var pnrNumber = document.getElementById("pnr").value;
+            // You would typically make an AJAX request here to fetch the PNR status
+            // For demonstration purpose, let's just display a message with the entered PNR number
+            document.getElementById("result").innerHTML = "PNR Status for " + pnrNumber + " will be displayed here.";
+        });
+    </script>
+</body>
+</html>
